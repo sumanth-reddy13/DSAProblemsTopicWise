@@ -8,8 +8,11 @@ public class patternProblems {
 //        pattern4(5);
 //          pattern5(5);
 //        pattern6(5);
-        pattern7(5);
+//        pattern7(5);
+//        pattern8(6);
+        pattern9(7);
     }
+
 
 
     /*                          1         1
@@ -173,6 +176,18 @@ public class patternProblems {
         }
     }
 
+    /*
+                         *
+                        * *
+                       *   *
+                      *     *
+                     *       *
+                     *       *
+                      *     *
+                       *   *
+                        * *
+                         *
+     */
     public static void pattern7(int n) {
         int count = 1;
         for (int i = 1;i <= 10; i++) {
@@ -195,4 +210,96 @@ public class patternProblems {
             System.out.println();
         }
     }
+    /*
+            *                    *
+             *                  *
+              *                *
+               *              *
+                *            *
+      ***********            ***********
+                *            *
+               *              *
+              *                *
+             *                  *
+            *                    *
+     */
+    public static void pattern8(int n) {
+
+        for (int i = 1;i < 2*n; i++) {
+
+            if (i == n) {
+                print(i);
+                continue;
+            }
+
+            int temp = i;
+            if (temp > n) temp = 2*n - i;
+            for (int j = 1;j <= n;j++) System.out.print(" ");
+            for (int j = 1;j<temp;j++) System.out.print(" ");
+            System.out.print("*");
+
+            for (int j = 1;j < n-temp;j++) System.out.print(" ");
+            for (int j = 1;j<=2*n;j++) System.out.print(" ");
+            for (int j = 1;j < n-temp;j++) System.out.print(" ");
+
+            System.out.print("*");
+            System.out.println();
+        }
+    }
+    public static void print(int n) {
+        for (int i = 1;i < 2*n;i++) {
+            System.out.print("*");
+        }
+        for (int j = 1;j<=2*n;j++) System.out.print(" ");
+        for (int i = 1;i < 2*n;i++) {
+            System.out.print("*");
+        }
+        System.out.println();
+    }
+
+    /*
+                                         *******
+                                         **   **
+                                         * * * *
+                                         *  *  *
+                                         * * * *
+                                         **   **
+                                         *******
+                           This pattern is for only odd 'n' values.
+
+     */
+    public static void pattern9(int n) {
+
+        for (int i = 0;i < n;i++) {
+            if (i == 0 || i == n-1) {
+                for (int j = 0;j<n;j++) System.out.print("*");
+                System.out.println();
+                continue;
+            }
+            if (i == n/2) {
+                System.out.print("*");
+                for (int j = 1;j < n/2;j++) System.out.print(" ");
+                System.out.print("*");
+                for (int j = 1;j < n/2;j++) System.out.print(" ");
+                System.out.print("*");
+                System.out.println();
+                continue;
+            }
+            int temp = i;
+            if (temp > n/2) {
+                temp = n - 1 - i;
+            }
+
+            System.out.print("*");
+            for (int j = 1;j<temp;j++) System.out.print(" ");
+            System.out.print("*");
+            for (int j = 0;j<n-(2*temp)-2;j++) System.out.print(" ");
+            System.out.print("*");
+            for (int j = 0;j<temp-1;j++) System.out.print(" ");
+            System.out.print("*");
+            System.out.println();
+        }
+    }
+
+
 }
