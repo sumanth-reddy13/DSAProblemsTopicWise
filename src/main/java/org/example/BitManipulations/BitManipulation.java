@@ -6,7 +6,7 @@ import java.util.List;
 public class BitManipulation {
     public static void main(String[] args) {
 //        Problem 1 -> Generate Power Set of a given array.
-//                generatePowerSet(3);
+                generatePowerSet(3);
 
 //        Problem - 2  -> generate PowerSet using BackTracking.
 //                char[] ch = {'a', 'b' ,'c'};
@@ -14,7 +14,7 @@ public class BitManipulation {
 //                generatePowerSet(powerSets, ch, "", 0);
 //                for (String s : powerSets) System.out.println(s);
 
-//        Problem - 3 -> Single Number II LeetCode Link: (https://leetcode.com/problems/single-number-ii/description/)
+//        Problem - 3 -> Single Number II Leetcode Link: (https://leetcode.com/problems/single-number-ii/description/)
 //                singleNumberII(new int[]{2, 2, 2, 3});
 
 

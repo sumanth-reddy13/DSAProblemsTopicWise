@@ -41,7 +41,7 @@ public class Pattern2 {
      */
     public static void moveZerosToEnd(int[] arr) {
 
-        // Approach 1
+        // Approach 1    TC - O(N)
         int zeros = 0;
         int n = arr.length;
 
@@ -55,7 +55,7 @@ public class Pattern2 {
             }
         }
 
-        // Approach 2
+        // Approach 2         TC: O(N)
         /*
                     int index = Integer.MAX_VALUE;
 

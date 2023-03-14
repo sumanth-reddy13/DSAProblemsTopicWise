@@ -44,7 +44,7 @@ public class ArrayRotation {
      /*
             I like this solution. Short & Crisp -> If sorted array is rotated, we will come across only one break point. That
             is, arr[i] > arr[i+1].
-            Traverse the array and check for the break points, if there are more than one breakpoint then the array is not
+            Traverse the array and check for the break points, if there are more than one breakpoints then the array is not
             sorted.
 
             Below is the Code.
@@ -70,6 +70,8 @@ public class ArrayRotation {
       Rotate the array k times
   */
     public static void rotateKTimes(int[] nums, int k) {
+
+        // This one is O(N) TC without any extra space.
         System.out.println(Arrays.toString(nums));
 
         swap(nums, 0, nums.length-1);
@@ -87,5 +89,12 @@ public class ArrayRotation {
             e--;
         }
     }
+
+    /*
+        Another Approach: We take a copy array of the given array. ith index in the array will go to ((i+k)%n)th index after
+        k rotations. (This is when array is rotated K times in the right direction.
+        -> with the help of the aux array, we change the elements in this array.
+        -> If it is rotated in the left direction K times, then we do (i-k)%n
+     */
 
 }

@@ -9,7 +9,7 @@ public class BasicRecursion {
         printGfg(5);
 
      */
-        int[] arr = {5,4,3,2,1,5,8,9};
+        int[] arr = {1,2,3,4,5,6};
         reverseArray(arr);
         System.out.print(Arrays.toString(arr));
     }
@@ -44,15 +44,20 @@ public class BasicRecursion {
     */
     public static void reverseArray(int[] arr) {
 
-        reverse(arr, 0, arr.length);
+        reverse(arr, 0, arr.length-1);
     }
     private static void reverse(int[] arr, int i, int n) {
-        if (i <= n/2) {
+        if (i < n) {
             int temp = arr[i];
-            arr[i] = arr[n-i-1];
-            arr[n-i-1] = temp;
-            reverse(arr, i+1, n);
+            arr[i] = arr[n];
+            arr[n] = temp;
+            reverse(arr, i+1, n-1);
         }
+//        if (i <= n/2) {
+//            int temp = arr[i];
+//            arr[i] = arr[n-i-1];
+//            arr[n-i-1] = temp;
+//            reverse(arr, i+1, n);
+//        }
     }
-
 }
